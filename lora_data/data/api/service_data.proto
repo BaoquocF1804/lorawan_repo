@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package pb_data;
+
+import "create_data.proto";
+
+option go_package = ".;pb_data";
+import "google/api/annotations.proto";
+
+import "get_data.proto";
+
+service DataSource{
+  rpc CreateData (CreateDataRequest) returns (CreateDataResponse){
+    option (google.api.http) = {
+      post : "/v1/create_data"
+      body : "*"
+    };
+  }
+  rpc GetUser (GetDataRequest) returns (GetDataResponse){
+    option (google.api.http) = {
+      get : "/v1/get_data"
+    };
+  }
+}

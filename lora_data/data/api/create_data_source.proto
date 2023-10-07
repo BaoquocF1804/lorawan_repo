@@ -1,0 +1,17 @@
+syntax = "proto3";
+
+package pb_data;
+
+import "data.proto";
+
+option go_package = ".;pb_data";
+
+message CreateUserRequest {
+  string temp = 1;
+  string humidity = 2;
+  string name_note = 3;
+}
+
+message CreateUserResponse {
+  Data data = 1;
+}

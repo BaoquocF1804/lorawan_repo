@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package pb_data;
+
+import "data.proto";
+
+option go_package = ".;pb_data";
+
+message GetUserRequest {
+  string name_node = 1;
+}
+
+message GetUserResponse {
+  Data Data = 1;
+}

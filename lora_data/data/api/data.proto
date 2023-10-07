@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+package pb_data;
+option go_package = ".;pb_data";
+
+
+message User {
+  string temp = 1;
+  string humidity = 2;
+  string name_note = 3;
+}
